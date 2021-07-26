@@ -1,0 +1,30 @@
+/* styles for footer section */
+
+@import "./variables";
+@import "./mixins";
+
+.footer-section {
+    width: 100%;
+    height: auto;
+    padding: 3rem 0;
+    text-align: center;
+    background: $footer_background_color;
+    display: none;
+
+    .row {
+        p {
+            color: $font_color;
+            text-transform: capitalize;
+
+            a {
+                color: $primary_color;
+                text-decoration: none;
+                transition: all 0.3s;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

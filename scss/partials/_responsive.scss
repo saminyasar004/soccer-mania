@@ -1,0 +1,186 @@
+/* styles for responsive preview */
+
+@import "./variables";
+@import "./mixins";
+
+/*
+ * 320px — 480px: xsmall
+ * 481px — 768px: small
+ * 769px — 1024px:  medium
+ * 1025px — 1200px:  large
+ * 1201px and more — xlarge
+*/
+
+/* 320 - 480 */
+
+@include media-query($xsmall) {
+    html {
+        font: {
+            size: 55%;
+        }
+    }
+
+    .row {
+        width: calc(100% - #{$row-width-gap});
+    }
+
+    .root {
+        .header-section,
+        .league-section {
+            .row {
+                .soccer-items-container {
+                    grid-template: repeat(1, 1fr) / repeat(1, 1fr);
+                    grid-gap: 3rem;
+                }
+            }
+        }
+
+        .league-section,
+        .team-section {
+            .banner-container {
+                .league-logo-container,
+                .team-logo-container {
+                    width: 45%;
+                }
+            }
+
+            .row {
+                .league-details-container,
+                .team-details-container {
+                    width: 90%;
+                    flex-direction: column;
+                    gap: 2rem;
+
+                    .league-text,
+                    .team-text {
+                        text-align: center;
+
+                        ul {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 481 - 768 */
+
+@include media-query($small) {
+    html {
+        font: {
+            size: 56%;
+        }
+    }
+
+    .row {
+        width: calc(100% - #{$row-width-gap});
+    }
+
+    .root {
+        .header-section,
+        .league-section {
+            .row {
+                .soccer-items-container {
+                    grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+                    grid-gap: 2rem;
+                }
+            }
+        }
+
+        .league-section,
+        .team-section {
+            .banner-container {
+                .league-logo-container,
+                .team-logo-container {
+                    width: 35%;
+                }
+            }
+
+            .row {
+                .league-details-container,
+                .team-details-container {
+                    width: 90%;
+                    flex-direction: column;
+                    gap: 2rem;
+
+                    .league-text,
+                    .team-text {
+                        text-align: center;
+
+                        ul {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 769 - 1024 */
+
+@include media-query($medium) {
+    html {
+        font: {
+            size: 58%;
+        }
+    }
+
+    .row {
+        width: calc(100% - #{$row-width-gap});
+    }
+
+    .root {
+        .header-section,
+        .league-section {
+            .row {
+                .soccer-items-container {
+                    grid-gap: 3rem;
+                }
+            }
+        }
+
+        .league-section,
+        .team-section {
+            .banner-container {
+                .league-logo-container,
+                .team-logo-container {
+                    width: 25%;
+                }
+            }
+
+            .row {
+                .league-details-container,
+                .team-details-container {
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+
+/* 1025 - 1200 */
+
+@include media-query($large) {
+    html {
+        font: {
+            size: 60%;
+        }
+    }
+}
+
+/* 1201 - more */
+
+@include media-query($xlarge) {
+    /* all elements are fit */
+}

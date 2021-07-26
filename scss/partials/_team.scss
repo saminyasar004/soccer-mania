@@ -1,0 +1,151 @@
+/* styles for league section */
+
+@import "./variables";
+@import "./mixins";
+
+.root {
+    width: 100%;
+    height: auto;
+    display: none;
+
+    .team-section {
+        width: 100%;
+        min-height: 100vh;
+        color: $font_color;
+        background: $background_color;
+
+        .banner-container {
+            width: 100%;
+            height: 30rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                url(https://www.thesportsdb.com/images/media/league/fanart/yrpswv1422061048.jpg);
+            background: {
+                repeat: no-repeat;
+                position: center;
+                size: cover;
+            }
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .team-logo-container {
+                width: 15%;
+                height: auto;
+                padding: 1rem 0;
+                border: 0.3rem solid #fff;
+                border-radius: 0.8rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    max-width: 70%;
+                }
+            }
+        }
+
+        .row {
+            padding: 1rem 0;
+
+            .team-details-container {
+                width: 70%;
+                height: auto;
+                margin: 3rem auto;
+                padding: 4rem;
+                background: $secondary_color;
+                border-radius: 0.8rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                .team-text {
+                    width: 100%;
+                    height: auto;
+
+                    h2 {
+                        font: {
+                            size: 2.5rem;
+                            weight: 400;
+                        }
+                    }
+
+                    ul {
+                        width: 90%;
+                        list-style: none;
+                        padding: 1rem 0;
+
+                        li {
+                            display: flex;
+                            gap: 2rem;
+                            padding: 0.5rem 0;
+
+                            i {
+                                font: {
+                                    size: 2rem;
+                                }
+                            }
+
+                            h4 {
+                                font: {
+                                    size: 1.8rem;
+                                    weight: 400;
+                                }
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+                }
+
+                .team-image {
+                    width: 100%;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+
+        .row {
+            .team-description {
+                text-align: justify;
+
+                p {
+                    font: {
+                        size: 1.5rem;
+                    }
+                    line-height: 1.7;
+                }
+            }
+
+            .team-social-links {
+                padding: 4rem 0;
+
+                ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 3rem;
+                    list-style: none;
+
+                    li {
+                        a {
+                            color: $font_color;
+                            transition: all 0.3s;
+
+                            &:hover {
+                                color: $primary_color;
+                            }
+
+                            i {
+                                font: {
+                                    size: 3rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

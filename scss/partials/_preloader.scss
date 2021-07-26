@@ -1,0 +1,56 @@
+/* styles for preloader section */
+
+@import "./variables";
+@import "./mixins";
+
+.pre-loader-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $background_color;
+
+    .spinner {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 0.5rem;
+
+        div {
+            width: 0.6rem;
+            height: 5rem;
+            border-radius: 0.4rem;
+            background: $primary_color;
+            animation: loaderAnimation 1.2s infinite ease-in-out;
+        }
+
+        .rect2 {
+            animation-delay: -1.1s;
+        }
+
+        .rect3 {
+            animation-delay: -1s;
+        }
+
+        .rect4 {
+            animation-delay: -0.9s;
+        }
+
+        .rect5 {
+            animation-delay: -0.8s;
+        }
+
+        @keyframes loaderAnimation {
+            0%,
+            40%,
+            100% {
+                transform: scaleY(0.5);
+            }
+
+            20% {
+                transform: scaleY(1);
+            }
+        }
+    }
+}

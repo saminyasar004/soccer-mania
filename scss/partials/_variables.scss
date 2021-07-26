@@ -1,0 +1,31 @@
+/* all variable */
+
+$primary_color: #1dd881;
+$secondary_color: #059d73;
+$background_color: #033333;
+$footer_background_color: #002525;
+$font_color: #fff;
+
+// media query
+
+$xsmall: (
+    "min": 320px,
+    "max": 480px,
+);
+$small: (
+    "min": 481px,
+    "max": 768px,
+);
+$medium: (
+    "min": 769px,
+    "max": 1024px,
+);
+$large: (
+    "min": 1025px,
+    "max": 1200px,
+);
+$xlarge: (
+    "min": 1201px,
+    "max": 1400px,
+);
+$row-width-gap: 3rem;

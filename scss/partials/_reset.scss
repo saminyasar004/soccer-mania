@@ -1,0 +1,46 @@
+/* browser reset code */
+
+@import "./variables";
+@import "./mixins";
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+::-webkit-scrollbar {
+    width: 1.1rem;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 0rem;
+    height: 12rem;
+    background: $secondary_color;
+    border-radius: 1rem;
+}
+
+html {
+    font: {
+        size: 62.5%;
+    }
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font: {
+        size: 1.4rem;
+        family: "Helvetica nue", sans-serif;
+    }
+    overflow-x: hidden;
+}
+
+input[type="submit"] {
+    outline: none;
+}

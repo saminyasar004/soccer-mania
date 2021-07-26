@@ -1,0 +1,37 @@
+@import "./variables";
+
+.row {
+    width: 100rem;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 1rem 2.5rem;
+    font: {
+        size: 1.5rem;
+    }
+    color: $font_color;
+    background: $secondary_color;
+    text-transform: capitalize;
+    border: 0.2rem solid $primary_color;
+    border-radius: 0.5rem;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        background: transparent;
+    }
+}
+
+.btn-explore {
+    @extend .btn;
+}
+
+/* mixin for responsive */
+
+@mixin media-query($size) {
+    @media screen and (min-width: map-get($size, "min")) and (max-width: map-get($size, "max")) {
+        @content;
+    }
+}
