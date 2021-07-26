@@ -35,6 +35,6 @@ Technologies used in this Project mentioned below:
 
 ## **Live Site Link**
 
-[Soccer Mania](https://soccer-mania.netlify.app/, "Soccer Mania Live Site")
+[Soccer Mania](https://soccer-mania.netlify.app/ "Soccer Mania Live Site")
 
 ### Happy Coding 🚀
